@@ -1,0 +1,25 @@
+package airCanadaBase;
+
+
+import java.io.IOException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Base 
+{
+	protected WebDriver driver;
+	public void launchBrowser()
+	{
+		System.setProperty("webdriver.chrome.driver","D:\\khushboo\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.aircanada.com/us/en/aco/home.html");
+		
+		
+		
+	}
+	
+	
+
+}

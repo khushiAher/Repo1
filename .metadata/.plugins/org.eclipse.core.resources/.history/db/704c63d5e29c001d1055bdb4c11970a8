@@ -1,0 +1,62 @@
+package airCanadaPOMClass;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
+
+import airCanadaUtility.Utility;
+
+//import airCanadaUtility.Utility;
+
+public class AirCanadaHomePage 
+{
+  @FindBy(xpath = "(//input[@type='radio'])[2]")private WebElement OneWayButton;
+  
+  @FindBy(xpath = "//input[@name='bkmgFlights_origin_trip_1']")private WebElement FromListBox;
+  
+  @FindBy(xpath = "//li[@id='bkmgFlights_origin_trip_1SearchResult3']")private WebElement SourceFrom;
+
+  @FindBy(xpath = "//input[@name='bkmgFlights_destination_trip_1']")private WebElement ToListBox;
+  
+  @FindBy(xpath = "//li[@id='bkmgFlights_destination_trip_1SearchResult4']")private WebElement DestinationTo;
+  
+  @FindBy(xpath = "(//div[@class='date'])[30]")private WebElement TravelDateList;
+  
+  
+  public AirCanadaHomePage(WebDriver driver)
+ {
+	 PageFactory.initElements(driver,this);
+ }
+	  public void clickOnOneWayButton(WebDriver driver) throws InterruptedException
+	{
+		Utility.scrollIntoView(driver, OneWayButton);
+		OneWayButton.click();
+		Reporter.log("Clicking on oneway Button", true);
+	}
+	
+	  public void EnterFromName() throws InterruptedException
+	  {
+		FromListBox.clear();
+		Thread.sleep(500);
+		FromListBox.sendKeys("Ottawa");
+		FromListBox.click();
+		Reporter.log("Enter Source city name",true);
+	}
+	  public void EnterToName() throws InterruptedException
+    {
+		 Thread.sleep(500);
+		 ToListBox.sendKeys("Torreon,Maxico");
+		 ToListBox.click();
+		 Reporter.log("Enter destination city name", true);
+		 
+	}
+	   public void EnterTravelDateList()
+	 {
+		   TravelDateList.click();
+		   Reporter.log("Enter travel date", true);
+		   
+	 }
+  
+}

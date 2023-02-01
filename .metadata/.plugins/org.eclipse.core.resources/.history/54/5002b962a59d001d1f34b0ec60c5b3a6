@@ -1,0 +1,51 @@
+package neoStoxPOMClass;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
+
+import neoStoxUtility.Utility;
+
+public class NeoStoxDashBoardPage 
+{
+   @FindBy(xpath ="(//a[text()='OK'])[2]") private WebElement popUpOkButton;
+   
+   @FindBy(xpath ="(//span[@aria-hidden='true'])[21]") private WebElement popUpCloseButton;
+   
+   @FindBy(xpath ="(//span[text()='Hi Khushboo pawar'])[1]") private WebElement userName; 
+   
+   @FindBy(xpath ="//span[text()='Logout']") private WebElement logOutButton;
+	
+    public NeoStoxDashBoardPage(WebDriver driver)
+  {
+	 PageFactory.initElements(driver, this);  
+  }
+    public void handlePopUp(WebDriver driver) throws InterruptedException
+  {  
+     Thread.sleep(300);
+     Utility.scrollIntoView(driver, popUpOkButton);
+     popUpOkButton.click();
+     Reporter.log("Cllick on Ok button", true);
+     
+    Thread.sleep(300);
+    popUpCloseButton.click();
+    Reporter.log("Click on close button", true);   
+  }
+    public void logOutFromNeoStox() throws InterruptedException
+  {
+    	userName.click();
+    	Thread.sleep(300);
+    	logOutButton.click();
+        Reporter.log("logging out from neo stox", true);
+        Thread.sleep(300);
+  }
+     public String getActualUserName()
+  {
+    	String actualUserName = userName.getText();
+    	Reporter.log("Getting actal user name", true);
+    	Reporter.log("Actual username is-->"+actualUserName, true);
+    	return actualUserName;
+  }
+}

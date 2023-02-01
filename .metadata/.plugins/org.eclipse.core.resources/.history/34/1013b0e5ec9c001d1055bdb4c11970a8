@@ -1,0 +1,44 @@
+package neoStoxTestClasses;
+
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import neoStoxUtility.Utility;
+import neoStoxBase.Base;
+import neoStoxPOMClass.NeoStoxHomePage;
+import neoStoxPOMClass.NeoStoxSignInPage;
+
+public class ValidateNeoStoxUserName extends Base
+{
+
+   NeoStoxHomePage home;
+   NeoStoxSignInPage signin;
+   
+
+@BeforeMethod
+
+public void launchNeoStoxApp()
+
+{
+	launchBrowser();
+	home = new NeoStoxHomePage(driver);
+	signin = new NeoStoxSignInPage(driver);
+  }
+
+@Test
+   public void loginToNeoStox() throws InterruptedException, EncryptedDocumentException, IOException
+ {
+	home.clickOnSignInButton();
+	Utility.implicitWait(500, driver);
+	
+	signin.enterMobileNumber(Utility.readDataFromExcel(0, 0));
+	Thread.sleep(500);
+	signin.clickOnSignInButton();
+	
+	
+ }
+   
+}

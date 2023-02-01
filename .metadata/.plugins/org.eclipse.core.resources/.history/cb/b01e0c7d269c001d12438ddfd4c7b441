@@ -1,0 +1,39 @@
+package airCanadaPOMClass;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
+
+//import airCanadaUtility.Utility;
+
+public class AirCanadaHomePage 
+{
+  @FindBy(xpath = "(//input[@type='radio'])[2]")private WebElement OneWayButton;
+  
+  @FindBy(xpath = "//input[@name='bkmgFlights_origin_trip_1']")private WebElement FromListBox;
+  
+  
+	
+	
+ 
+ 
+  public AirCanadaHomePage(WebDriver driver)
+ {
+	 PageFactory.initElements(driver,this);
+ }
+	public void clickOnOneWayButton()
+	{
+		OneWayButton.click();
+		Reporter.log("Clicking on oneway Button", true);
+	}
+	
+	public void EnterFromName()
+	{
+		//FromListBox.sendKeys("Hamilton");
+		FromListBox.sendKeys("HLZ");
+		Reporter.log("Enter City name",true);
+	}
+  
+}

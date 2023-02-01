@@ -1,0 +1,6 @@
+package neoStoxPOMClass;
+
+public class ValidateNeoStoxUserName 
+{
+  @find()
+}

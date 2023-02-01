@@ -1,0 +1,20 @@
+package logical;
+
+public class ReverseNumber
+{
+
+	public static void main(String[] args) 
+	{
+		int orgNum=12344;
+		String orgStr=Integer.toString(orgNum);
+		String revNum="";
+		
+		for(int i=orgStr.length()-1; i>=0; i--)
+		{
+			char t=revNum.charAt(i);
+			revNum=revNum+t;
+		}
+		System.out.println(revNum);
+	}
+
+}

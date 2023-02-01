@@ -1,0 +1,23 @@
+package neoStoxTestClasses;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import neoStoxBase.Base;
+import neoStoxPOMClass.NeoStoxHomePage;
+
+public class ValidateNeoStoxUserName extends Base
+{
+
+   NeoStoxHomePage home;
+
+@BeforeMethod
+
+public void launchNeoStoxApp()
+
+{
+	launchBrowser();
+	home = new NeoStoxHomePage(driver);
+	
+  }
+}

@@ -1,0 +1,25 @@
+package airCanadaTestClasses;
+
+import org.testng.annotations.Test;
+
+import airCanadaBase.Base;
+import airCanadaPOMClass.AirCanadaHomePage;
+
+public class ValidateAirCanadaHomePage extends Base
+{
+	AirCanadaHomePage home;
+	
+	//@BeforeClass
+	 @Test
+	public void launchAirCanada()
+	{
+		launchBrowser();
+		home = new AirCanadaHomePage(driver);
+		
+	}
+	
+	
+ 
+  public void f() {
+  }
+}

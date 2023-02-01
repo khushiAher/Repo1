@@ -1,0 +1,32 @@
+package neoStoxTestClasses;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import airCanadaUtility.Utility;
+import neoStoxBase.Base;
+import neoStoxPOMClass.NeoStoxHomePage;
+
+public class ValidateNeoStoxUserName extends Base
+{
+
+   NeoStoxHomePage home;
+
+@BeforeMethod
+
+public void launchNeoStoxApp()
+
+{
+	launchBrowser();
+	home = new NeoStoxHomePage(driver);
+	
+  }
+
+@Test
+ public void loginToNeoStox()
+ {
+	home.clickOnSignInButton();
+	Utility.implicitWait(500, driver);
+	
+ }
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Waiting for1000]]>
+    </line>
+    <line>
+      <![CDATA[launching browser]]>
+    </line>
+    <line>
+      <![CDATA[scrolling into view]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on oneway Button]]>
+    </line>
+    <line>
+      <![CDATA[Waiting for1000]]>
+    </line>
+    <line>
+      <![CDATA[Enter Source city name]]>
+    </line>
+    <line>
+      <![CDATA[Waiting for1000]]>
+    </line>
+    <line>
+      <![CDATA[Enter Source city name]]>
+    </line>
+    <line>
+      <![CDATA[Waiting for1000]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-01-27T21:51:32 IST" name="Default suite" finished-at="2023-01-27T21:52:04 IST" duration-ms="32027">
+    <groups>
+    </groups>
+    <test started-at="2023-01-27T21:51:32 IST" name="Default test" finished-at="2023-01-27T21:52:04 IST" duration-ms="32027">
+      <class name="airCanadaTestClasses.ValidateAirCanadaHomePage">
+        <test-method is-config="true" signature="launchAirIndiaApp()[pri:0, instance:airCanadaTestClasses.ValidateAirCanadaHomePage@4803b726]" started-at="2023-01-27T21:51:32 IST" name="launchAirIndiaApp" finished-at="2023-01-27T21:51:50 IST" duration-ms="17798" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Waiting for1000]]>
+            </line>
+            <line>
+              <![CDATA[launching browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launchAirIndiaApp -->
+        <test-method signature="loginToAirCanada()[pri:0, instance:airCanadaTestClasses.ValidateAirCanadaHomePage@4803b726]" started-at="2023-01-27T21:51:50 IST" name="loginToAirCanada" finished-at="2023-01-27T21:52:04 IST" duration-ms="14150" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[scrolling into view]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on oneway Button]]>
+            </line>
+            <line>
+              <![CDATA[Waiting for1000]]>
+            </line>
+            <line>
+              <![CDATA[Enter Source city name]]>
+            </line>
+            <line>
+              <![CDATA[Waiting for1000]]>
+            </line>
+            <line>
+              <![CDATA[Enter Source city name]]>
+            </line>
+            <line>
+              <![CDATA[Waiting for1000]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToAirCanada -->
+      </class> <!-- airCanadaTestClasses.ValidateAirCanadaHomePage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

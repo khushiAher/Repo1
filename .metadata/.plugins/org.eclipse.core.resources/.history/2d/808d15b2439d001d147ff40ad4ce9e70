@@ -1,0 +1,25 @@
+package neoStoxPOMClass;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class neoStoxPasswordPage 
+{
+
+	@FindBy(id ="txt_accesspin") private WebElement pwdField;
+	
+	@FindBy(id ="lnk_submitaccesspin") private WebElement submitButton;
+	
+	  public neoStoxPasswordPage(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+	  public void EnterPassword()
+	{
+		 passwordField.sendKeys(pwdField);
+		 
+	}
+			
+}
